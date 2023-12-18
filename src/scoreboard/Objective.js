@@ -4,6 +4,7 @@ export class ScoreboardObjectiveWrapper {
     constructor(name) {
         this.objectiveName = name;
         this.objective = world.scoreboard.getObjective(name);
+        this.displayName = this.objective.displayName;
 
         if (!this.objective) throw new Error("This objective doesn't exist!");
     };
