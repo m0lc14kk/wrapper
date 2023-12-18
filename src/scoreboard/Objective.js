@@ -1,6 +1,10 @@
 import { Entity, Player, ScoreboardIdentity, world } from "@minecraft/server";
 
 export class ScoreboardObjectiveWrapper {
+    /**
+     * @param {string} name Name of objective.
+     * @throws Constructor throws an error, if objective doesn't exist.
+     */
     constructor(name) {
         this.objectiveName = name;
         this.objective = world.scoreboard.getObjective(name);

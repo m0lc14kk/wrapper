@@ -4,6 +4,7 @@ export class DisplaySettings {
     /**
      * @param {"sidebar" | "list" | "belowname"} displaySlot Slot, where objective gonna be showed.
      * @param {"ascending" | "descending"} sortOrder Sort order also accepts 0 (ascending) and 1 (descending).
+     * @throws Constructor throws an error, if one of params doesn't match the built ones.
      */
     constructor(displaySlot, sortOrder) {
         if (displaySlot != "sidebar" && displaySlot != "list" && displaySlot != "belowname") throw new Error("This display slot doesn't exist!");
